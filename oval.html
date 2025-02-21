@@ -1,8 +1,98 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: #222;
+    color: white;
+    padding: 15px;
+}
+
+nav .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.race-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.race-card {
+    background: #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    width: 30%;
+    cursor: pointer;
+}
+
+.race-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form input, form select, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.leaderboards {
+    display: flex;
+    gap: 20px;
+}
+
+.leaderboard {
+    width: 50%;
+    background: #eee;
+    padding: 15px;
+    border-radius: 5px;
+}
+
 <!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Speed Dreams Races</title>
+    <title>Oval Racing Challenge</title>
     <style>/* style.css */
         body {
             font-family: Arial, sans-serif;
@@ -105,30 +195,29 @@
         </ul>
     </nav>
     <div class="container">
-        <h2>Welcome to Speed Dreams Races</h2>
-        <h3>Season 1 - Week 1</h3>
-        <p>Join exciting races across different disciplines. Choose your race below! See the <a href="/instructions.html">instructions</a> page for more information on submission</p>
-        <div class="race-grid">
-            <div class="race-card" onclick="location.href='sports.html'">
-                <img src="sports_car.jpg" alt="Sports Car">
-                <h3>Sports Car Challenge</h3>
-                <p>Car: Boxer Cup</p>
-                <p>Track: What Kins Glen</p>
-                <p>Conditions: Dry</p>
+        <h2>Oval Racing Challenge</h2>
+        <p>Oval racing challenge week 1</p>
+        <form>
+            <label>Mode:</label>
+            <select>
+                <option>Lap</option>
+                <option>Race</option>
+            </select>
+            <input type="text" placeholder="Enter session code">
+            <button type="submit">Submit</button>
+        </form>
+        <div class="leaderboards">
+            <div class="leaderboard">
+                <h3>Season Standings</h3>
+                <p>Waiting for drivers...</p>
             </div>
-            <div class="race-card" onclick="location.href='formula.html'">
-                <img src="formula_car.jpg" alt="Formula Car">
-                <h3>Formula GP</h3>
-                <p>Car: mp5</p>
-                <p>Track: pebble</p>
-                <p>Conditions: Dry</p>
+            <div class="leaderboard">
+                <h3>Fastest Lap Times</h3>
+                <p>Waiting for drivers...</p>
             </div>
-            <div class="race-card" onclick="location.href='oval.html'">
-                <img src="oval_car.jpg" alt="Oval Car">
-                <h3>Oval Thunder</h3>
-                <p>Car: NASCAR</p>
-                <p>Track: alamo</p>
-                <p>Conditions: Dry</p>
+            <div class="leaderboard">
+                <h3>Fastest Race Times</h3>
+                <p>Waiting for drivers...</p>
             </div>
         </div>
     </div>
